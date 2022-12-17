@@ -1,12 +1,15 @@
 const app = require('express')()
 
 app.post('/log', (req, res) => {
-    const { type, data, action } = req.body
     console.log({
-        type,
-        data,
-        action
+        body: req.body
     });
+    // const { type, data, action } = req.body
+    // console.log({
+    //     type,
+    //     data,
+    //     action
+    // });
 
     res.status(200)
 })
