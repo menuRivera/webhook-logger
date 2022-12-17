@@ -7,16 +7,18 @@ app.post('/log', (req, res) => {
     console.log({
         body: req.body
     });
-    // const { type, data, action } = req.body
-    // console.log({
-    //     type,
-    //     data,
-    //     action
-    // });
 
-    res.status(200).json({success: true})
+    console.warn({
+        body: req.body
+    })
+
+    res.status(200).json({ success: true })
+})
+
+app.get('/', (req, res) => {
+    res.send('Nothing to see here')
 })
 
 app.listen(80, () => {
-    console.log('Logger listening on port 3000');
+    console.log('Logger listening');
 })
