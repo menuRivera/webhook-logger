@@ -11,6 +11,6 @@ app.post('/log', (req, res) => {
     res.status(200)
 })
 
-app.listen(3000, () => {
+app.listen(80, () => {
     console.log('Logger listening on port 3000');
 })
