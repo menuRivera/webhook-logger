@@ -4,13 +4,17 @@ const app = express()
 app.use(express.json())
 
 app.post('/log', (req, res) => {
-    console.log({
-        body: req.body
-    });
+    // console.log({
+    //     body: req.body
+    // });
 
-    console.warn({
-        body: req.body
+    console.table({
+        ...req.body
     })
+
+    // console.warn({
+    //     body: req.body
+    // })
 
     res.status(200).json({ success: true })
 })
