@@ -14,7 +14,7 @@ app.post('/log', (req, res) => {
     //     action
     // });
 
-    res.status(200)
+    res.status(200).json({success: true})
 })
 
 app.listen(80, () => {
