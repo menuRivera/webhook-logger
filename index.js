@@ -4,17 +4,7 @@ const app = express()
 app.use(express.json())
 
 app.post('/log', (req, res) => {
-    // console.log({
-    //     body: req.body
-    // });
-
-    console.table({
-        ...req.body
-    })
-
-    // console.warn({
-    //     body: req.body
-    // })
+    console.dir(req.body, { depth: null })
 
     res.status(200).json({ success: true })
 })
