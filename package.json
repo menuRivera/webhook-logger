@@ -1,6 +1,5 @@
 {
   "name": "webhook-logger",
-  "type": "module",
   "main": "index.js",
   "author": "Manuel Rivera",
   "license": "ISC",
