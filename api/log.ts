@@ -19,5 +19,9 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
 	})
 
 
-	return res.status(200).json({ success: true })
+	return res.status(200).json({
+		method: req.method,
+		query: req.query,
+		body: req.body,
+	})
 }
